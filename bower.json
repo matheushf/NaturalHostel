@@ -1,0 +1,45 @@
+{
+  "name": "NaturalHostel",
+  "description": "Portal for a Hostel",
+  "main": "index.php",
+  "authors": [
+    "matheushf"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "postcss",
+    "gulp",
+    "sass",
+    "js"
+  ],
+  "homepage": "https://github.com/matheushf/NaturalHostel",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "animate.css": "^3.5.2",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.6.3",
+    "jquery.maskedinput": "^1.4.1"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/js/bootstrap.js",
+        "dist/css/bootstrap.min.css",
+        "less/bootstrap.less"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.min.css"
+      ]
+    }
+  }
+}

@@ -44,7 +44,7 @@ gulp.task('styles', function () {
             sass: 'assets/sass'
         }),
         postcss(processors),
-        gulp.dest('assets/css')
+        gulp.dest('assets/css/')
     ]);
 });
 
@@ -57,11 +57,17 @@ gulp.task('jshint', function () {
     ]);
 });
 
+gulp.task('reload', function () {
+    pump([
+        gulp.src(srcPaths),
+        refresh()
+    ]);
+});
+
 gulp.task('fonts', function () {
     pump([
         gulp.src([
-            'bower_components/font-awesome/fonts/fontawesome-webfont.*'
-        ]),
+            'bower_components/font-awesome/fonts/fontawesome-webfont.*']),
         gulp.dest('assets/fonts/')
     ]);
 });
