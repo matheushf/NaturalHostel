@@ -8,17 +8,34 @@ get_header('Início');
     <div class="container-fluid">
         <div class="container-fluid">
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="intro-message">
+            <div class="row intro-strip animated fadeIn">
+                <div class="col-lg-3">
+                    <div class="intro-image animated fadeInLeft">
+                        <img src="/assets/img/maça.png">
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="intro-logo animated fadeInDown">
                         <center>
-<!--                            <h1>Natural Hostel</h1>-->
+                            <img src="/assets/img/logo.png">
                         </center>
                     </div>
-                    <div class="intro-buttons">
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="intro-buttons animated fadeInRight">
+                        <a class="btn btn-primary">Facebook</a>
+                        <a class="btn btn-primary">Instagram</a>
                     </div>
                 </div>
             </div>
+
+            <!-- Arrow to indicate scroll -->
+
+            
+
         </div>
     </div>
+</div>
 </div>
