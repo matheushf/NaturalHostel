@@ -25,17 +25,36 @@ get_header('Início');
 
                 <div class="col-lg-3">
                     <div class="intro-buttons animated fadeInRight">
-                        <a class="btn btn-primary">Facebook</a>
-                        <a class="btn btn-primary">Instagram</a>
+                        <a class="btn btn-primary facebook"><i class="fa fa-facebook"></i>Facebook</a>
+                        <a class="btn btn-primary instagram"><i class="fa fa-instagram"></i>Instagram</a>
                     </div>
                 </div>
             </div>
 
             <!-- Arrow to indicate scroll -->
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4 scroll-message">
+                <p> <i class="fa fa-arrow-circle-down"></i> Role para baixo <i class="fa fa-arrow-circle-down"></i> </p>
+            </div>
+            <div class="col-lg-4"></div>
 
-            
 
         </div>
     </div>
 </div>
+
+<div class="wrapper">
+    <div class="container wrapper-content">
+        <div class="row">
+            <div class="col-lg-12">
+                <br><br><br>
+                <p>
+                    Some dumb text placeholder. Some dumb text placeholder. Some dumb text placeholder. Some dumb text
+                    placeholder. Some dumb text placeholder. Some dumb text placeholder. Some dumb text placeholder.
+                    Some dumb text placeholder.
+                </p>
+            </div>
+        </div>
+
+    </div>
 </div>

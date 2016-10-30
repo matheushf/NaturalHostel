@@ -29,10 +29,7 @@ body, h1, h2, h3, h4, h5, h6 {
 
   .intro-strip {
     margin-top: 20px;
-
-    //background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     background: linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-
     display: flex;
     align-items: center;
 
@@ -55,8 +52,28 @@ body, h1, h2, h3, h4, h5, h6 {
     }
 
     .intro-buttons {
+      a {
+        width: 130px;
+        padding: 10px;
+        border-radius: 0;
+        background-color: white;
+        color: black;
+      }
 
+      i {
+        margin-right: 5px;
+        font-size: 17px;
+      }
     }
   }
 
+  .scroll-message {
+    margin-top: 25%;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    i {
+      margin: 7px;
+    }
+  }
 }
