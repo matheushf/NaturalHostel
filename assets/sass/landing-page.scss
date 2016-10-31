@@ -5,6 +5,9 @@
   src: url(/assets/fonts/ufonts.com_amazone-bt.ttf);
 }
 
+$verdeBase: #ace39f;
+$verdeMenu: rgba(44, 108, 30, 0.74);
+
 body,
 html {
   width: 100%;
@@ -14,6 +17,10 @@ html {
 body, h1, h2, h3, h4, h5, h6 {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
+}
+
+body {
+  background: rgba(161, 225, 147, 0.88);
 }
 
 .intro-header {
@@ -29,7 +36,7 @@ body, h1, h2, h3, h4, h5, h6 {
 
   .intro-strip {
     margin-top: 20px;
-    background: linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    background: linear-gradient(left, rgba(0, 0, 0, 0), $verdeMenu, $verdeMenu, $verdeMenu, rgba(0, 0, 0, 0));
     display: flex;
     align-items: center;
 
@@ -67,13 +74,89 @@ body, h1, h2, h3, h4, h5, h6 {
     }
   }
 
+  .scroll-message, .scroll-message i, .scroll-message:hover, .scroll-message:hover i {
+    transition: 0.3s ease-out;
+  }
+
   .scroll-message {
     margin-top: 25%;
-    font-size: 25px;
-    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 35px;
+    background-color: $verdeMenu;
+    border-radius: 500px;
+    width: 80px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    //transform: translate(-50%, -50%);
 
     i {
       margin: 7px;
+      color: white;
+    }
+
+    &:hover {
+      width: 81px;
+      height: 80px;
+
+      i {
+        margin-top: 20px;
+      }
+    }
+
+  }
+}
+
+.menu-tabs {
+  margin-top: 10px;
+  color: black;
+  text-align: center;
+  background: $verdeMenu;
+  border: 3px opacify(lighten($verdeMenu, 15%), 0.5) solid;
+
+  .nav-tabs {
+    border-bottom: 0;
+  }
+
+  ul {
+    margin-top: 10px;
+    display: inline-block;
+  }
+
+  li {
+    margin-right: 7px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    a {
+      color: white;
+    }
+  }
+
+  .menu-active {
+    border-top: 3px solid rgba(168, 144, 46, 0.88);
+    border-bottom: 3px solid rgba(168, 144, 46, 0.88);
+  }
+
+}
+
+.wrapper-content {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgba(67, 164, 45, 0.1);
+  line-height: 1.8em;
+  font-size: 15px;
+  text-align: left;
+
+  p {
+    //max-width: 650px;
+    word-wrap: break-word;
+  }
+
+  .about-section {
+    img {
+      width: 50%;
+      height: auto;
     }
   }
 }
