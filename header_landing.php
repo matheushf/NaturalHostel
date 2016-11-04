@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
     <!-- endbower -->
 
+    <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/landing-page.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
