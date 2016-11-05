@@ -12,13 +12,15 @@ html {
   height: 100%;
 }
 
-body, h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 body {
-  background: rgba(161, 225, 147, 0.88);
+
+  background: rgba(221, 245, 214, 0.88);
+  font-weight: 500;
 }
 
 .intro-header {
