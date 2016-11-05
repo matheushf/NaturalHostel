@@ -57,9 +57,9 @@
                     <div class="menu-tabs">
                         <ul class="nav nav-tabs">
                             <li class="menu-item menu-active"><a class="menu-link">Início</a></li>
-                            <li class="menu-item"><a class="menu-link">Reservas</a></li>
+                            <li class="menu-item"><a href="/pages/reserva.php" class="menu-link">Reservas</a></li>
                             <li class="menu-item"><a href="/pages/quartos.php" class="menu-link">Quartos</a></li>
-                            <li class="menu-item"><a class="menu-link">Galeria</a></li>
+                            <li class="menu-item"><a href="/pages/galeria.php" class="menu-link">Galeria</a></li>
                             <li class="menu-item"><a class="menu-link">Serviços</a></li>
                             <li class="menu-item"><a class="menu-link">Como Chegar</a></li>
                             <li class="menu-item"><a class="menu-link">Contato</a></li>

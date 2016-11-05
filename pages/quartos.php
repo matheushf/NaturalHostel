@@ -46,3 +46,6 @@ $quartos = array(
 
 
 </div>
+
+<?php
+get_footer();
