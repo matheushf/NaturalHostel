@@ -25,13 +25,13 @@
         <div class="col-lg-12">
 
             <div class="row intro-strip animated fadeIn">
-                <div class="col-lg-3">
+                <div class="col-lg-3 pull-right">
                     <div class="intro-image animated fadeInLeft">
                         <img src="/assets/img/maça.png">
                     </div>
                 </div>
 
-                <div class="col-lg-6">
+                <div class="col-lg-7 pull-left">
                     <div class="intro-logo animated fadeInDown">
                         <center>
                             <img src="/assets/img/logo.png">
@@ -39,7 +39,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3">
+                <div class="col-lg-2 pull-right">
                     <div class="intro-buttons animated fadeInRight">
                         <a class="btn btn-primary facebook"><i class="fa fa-facebook"></i>Facebook</a>
                         <a class="btn btn-primary instagram"><i class="fa fa-instagram"></i>Instagram</a>

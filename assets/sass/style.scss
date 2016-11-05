@@ -70,6 +70,25 @@
   margin-bottom: 10px;
 }
 
+.section-gallery {
+  margin-top: 20px;
+
+  .collum-gallery {
+    margin-bottom: 30px;
+
+    img {
+      min-height: 270px;
+      min-width: 290px;
+
+      max-height: 270px;
+      max-width: 290px;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}
+
 .footer {
   background-color: $verdeMenu;
 }
