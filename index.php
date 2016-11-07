@@ -1,8 +1,30 @@
 <?php
 require_once 'libs/config.php';
 
-get_header('Início', true);
+//get_header('Início', true);
 ?>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Natural Hostel</title>
+
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="/bower_components/animate.css/animate.css"/>
+    <!-- endbower -->
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/landing-page.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+</head>
+
+<body>
 
 <div class="intro-header">
     <div class="container-fluid">
@@ -49,10 +71,10 @@ get_header('Início', true);
             <div class="row">
                 <div class="menu-tabs">
                     <ul class="nav nav-tabs">
-                        <li class="menu-item menu-active"><a class="menu-link">Início</a></li>
+                        <li class="menu-item menu-active"><a href="/index.php" class="menu-link">Início</a></li>
+                        <li class="menu-item"><a href="/pages/reserva.php" class="menu-link">Reservas</a></li>
                         <li class="menu-item"><a href="/pages/quartos.php" class="menu-link">Quartos</a></li>
-                        <li class="menu-item"><a class="menu-link">Como Chegar</a></li>
-                        <li class="menu-item"><a class="menu-link">Galeria</a></li>
+                        <li class="menu-item"><a href="/pages/galeria.php" class="menu-link">Galeria</a></li>
                         <li class="menu-item"><a class="menu-link">Reserve aqui</a></li>
                         <li class="menu-item"><a class="menu-link">Serviços</a></li>
                         <li class="menu-item"><a class="menu-link">Contato</a></li>
@@ -130,3 +152,6 @@ get_header('Início', true);
     <br><br><br>
 
 </div>
+
+</body>
+</html>
