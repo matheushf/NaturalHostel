@@ -1,10 +1,22 @@
 $(function () {
 
-    aeroporto = {lat: -27.668024, lng: -48.545819};
-    rodoviaria = {lat: 0, lng: 0};
-    ponte_da_ilha = {lat: 0, lng: 0};
+    $(".localizacoes-destino").click(function () {
+        // Ao clicar em uma localização de origem recarregar o mapa com a origem certa
+        initMap($(this).attr('id'));
+    });
 
-    destino_natural_hostel = {lat: -27.608471, lng: -48.453070};
+});
+
+// Função para inicializar o maps
+function initMap(origem) {
+
+    natural_hostel = {lat: -27.608471, lng: -48.453070};
+
+    origem_obj = {
+        aeroporto: {lat: -27.668024, lng: -48.545819},
+        rodoviaria: {lat: -27.597116, lng: -48.557669},
+        ponte_da_ilha: {lat: -27.598098, lng: -48.560033}
+    };
 
     var map = new google.maps.Map(document.getElementById('map'), {
         center: natural_hostel,
@@ -27,7 +39,7 @@ $(function () {
     // Set destination, origin and travel mode.
     var request = {
         destination: natural_hostel,
-        origin: aeroporto,
+        origin: origem_obj[origem],
         travelMode: 'DRIVING'
     };
 
@@ -39,5 +51,4 @@ $(function () {
             directionsDisplay.setDirections(response);
         }
     });
-
-});
+}

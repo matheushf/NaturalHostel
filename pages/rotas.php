@@ -9,9 +9,9 @@ get_header('Como Chegar');
     <div class="col-lg-12">
         <h3>Saindo de:</h3>
         <ul class="localizacoes-origem">
-            <li><a id="">Aeroporto</a></li>
-            <li><a id="">Rodoviária</a></li>
-            <li><a id="">Ponte da Ilha</a></li>
+            <li><a id="aeroporto" class="localizacoes-destino">Aeroporto</a></li>
+            <li><a id="rodoviaria" class="localizacoes-destino">Rodoviária</a></li>
+            <li><a id="ponte_da_ilha" class="localizacoes-destino">Ponte da Ilha</a></li>
         </ul>
         
         <br>
