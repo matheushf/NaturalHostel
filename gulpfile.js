@@ -26,8 +26,8 @@ srcPaths.push('**/*.html');
 srcPaths.push('**/*.php');
 
 var srcWiredep = [
-    'head.php',
-    'foot.php'
+    'header.php',
+    'footer.php'
 ];
 
 gulp.task('styles', function () {

@@ -12,5 +12,11 @@
     </div>
 </footer>-->
 
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/jquery.maskedinput/dist/jquery.maskedinput.js"></script>
+<!-- endbower -->
+
 </body>
 </html>
