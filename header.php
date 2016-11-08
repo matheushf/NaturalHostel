@@ -60,9 +60,9 @@
                             <li class="menu-item"><a href="/pages/reserva.php" class="menu-link">Reservas</a></li>
                             <li class="menu-item"><a href="/pages/quartos.php" class="menu-link">Quartos</a></li>
                             <li class="menu-item"><a href="/pages/galeria.php" class="menu-link">Galeria</a></li>
-                            <li class="menu-item"><a class="menu-link">Serviços</a></li>
+                            <li class="menu-item"><a href="/pages/servicos.php" class="menu-link">Serviços</a></li>
                             <li class="menu-item"><a href="/pages/rotas.php" class="menu-link">Como Chegar</a></li>
-                            <li class="menu-item"><a class="menu-link">Contato</a></li>
+                            <li class="menu-item"><a href="/pages/contato.php" class="menu-link">Contato</a></li>
                         </ul>
                     </div>
                 </div>

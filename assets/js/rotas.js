@@ -1,11 +1,23 @@
-function initMap() {
-    var aeroporto = {lat: -27.668024, lng: -48.545819};
-    var natural_hostel = {lat: -27.608471, lng: -48.453070};
+$(function () {
+
+    aeroporto = {lat: -27.668024, lng: -48.545819};
+    rodoviaria = {lat: 0, lng: 0};
+    ponte_da_ilha = {lat: 0, lng: 0};
+
+    destino_natural_hostel = {lat: -27.608471, lng: -48.453070};
 
     var map = new google.maps.Map(document.getElementById('map'), {
         center: natural_hostel,
-        scrollwheel: false,
-        zoom: 7
+        scrollwheel: true,
+        zoom: 7,
+        mapTypeControl: true,
+        mapTypeControlOptions: {
+            style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+            mapTypeIds: [
+                google.maps.MapTypeId.ROADMAP,
+                google.maps.MapTypeId.TERRAIN
+            ]
+        }
     });
 
     var directionsDisplay = new google.maps.DirectionsRenderer({
@@ -27,4 +39,5 @@ function initMap() {
             directionsDisplay.setDirections(response);
         }
     });
-}
+
+});

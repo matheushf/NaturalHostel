@@ -24,3 +24,7 @@ get_header('Galeria de Fotos');
 
     </div>
 </div>
+
+
+<?php
+get_footer();

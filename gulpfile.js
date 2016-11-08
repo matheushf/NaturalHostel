@@ -76,8 +76,7 @@ gulp.task('bower', function () {
     pump([
         gulp.src(srcWiredep),
         wiredep({
-            bowerJson: require('./bower.json'),
-            addRootSlash: true
+            bowerJson: require('./bower.json')
         }),
         gulp.dest('./')
     ]);
