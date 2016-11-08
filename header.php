@@ -7,9 +7,9 @@
     <title>Natural Hostel</title>
 
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css" />
     <!-- endbower -->
 
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -56,7 +56,7 @@
                 <div class="row">
                     <div class="menu-tabs">
                         <ul class="nav nav-tabs">
-                            <li class="menu-item menu-active"><a href="/index.php" class="menu-link">Início</a></li>
+                            <li class="menu-item"><a href="/index.php" class="menu-link">Início</a></li>
                             <li class="menu-item"><a href="/pages/reserva.php" class="menu-link">Reservas</a></li>
                             <li class="menu-item"><a href="/pages/quartos.php" class="menu-link">Quartos</a></li>
                             <li class="menu-item"><a href="/pages/galeria.php" class="menu-link">Galeria</a></li>

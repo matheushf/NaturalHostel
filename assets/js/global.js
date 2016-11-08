@@ -8,13 +8,13 @@ function setCurrentMenu(el) {
     file = file[file.length - 1];
 
     if (path == '/') {
-        $(this).addClass('active');
+        $(this).addClass('menu-active');
         return false;
     }
 
     $(el).find('li').each(function () {
         var link = $(this).find('a').attr('href');
-        if (link == path || link.match(file))
-            $(this).addClass('active');
+        if (link == path || ( typeof link != 'undefined' && link.match(file)))
+            $(this).addClass('menu-active');
     });
 }
