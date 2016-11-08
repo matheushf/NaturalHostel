@@ -19,33 +19,40 @@ $quartos = array(
     'Costão do Santinho' => array('costaoDoSantinho1.jpg')
 );
 
+$descricoes = array (
+    "Jurere" => "Quarto Privativo, Casal ou mais pessoas, com banheiro, ventilador e armário, com rede e vista para Lagoa da Conceição.",
+    "Matadeiro" => "Quarto Compartilhado misto com rede e vista para Lagoa da Conceição.",
+    "Praia Mole" => "Quarto Compartilhado misto com um Banheiro, ventilador e armário compartilhado.",
+    "Joaquina" => "Quarto Compartilhado misto com um Banheiro, ventilador e armário compartilhado.",
+    "Costão do Santinho" => "Quarto Compartilhado misto com um Banheiro, ventilador e armário compartilhado."
+);
+
 ?>
 
-<div class="row">
+    <link rel="stylesheet" href="/assets/css/quartos.css">
 
-    <?php foreach ($quartos as $quarto => $imagens) { ?>
+<?php foreach ($quartos as $quarto => $imagens) { ?>
 
-        <?php foreach ($imagens as $img) { ?>
+    <?php foreach ($imagens as $img) { ?>
 
-            <div class="col-lg-12 text-center section-rooms">
-
-            </div>
+        <div class="row section-rooms">
 
             <div class="col-lg-4">
                 <img src="/assets/img/<?= $img ?>" class="img-responsive img-rounded">
             </div>
 
             <div class="col-lg-8">
-                <h3 class="text-center">Quarto <?= $quarto ?> </h3>
+                <h3 class="text-center"> Quarto <?= $quarto ?> </h3>
+                <br>
+                <p> <?= $descricoes[$quarto] ?> </p>
+                <p><a>Ver Mais +</a></p>
             </div>
 
-        <?php } ?>
+        </div>
 
     <?php } ?>
-</div>
 
-
-</div>
+<?php } ?>
 
 <?php
 get_footer();

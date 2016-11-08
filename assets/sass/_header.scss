@@ -1,10 +1,9 @@
+@import "variables";
+
 @font-face {
   font-family: amazoneBt;
   src: url(/assets/fonts/ufonts.com_amazone-bt.ttf);
 }
-
-$verdeBase: #ace39f;
-$verdeMenu: rgba(44, 108, 30, 0.74);
 
 body,
 html {

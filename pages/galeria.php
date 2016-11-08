@@ -7,8 +7,9 @@ get_header('Galeria de Fotos');
 
 <div class="container">
     <div class="row section-gallery">
+        
         <div class="col-lg-4 collum-gallery">
-            <img src="/assets/img/intro1.jpg" class="img-responsive img-circle" style="">
+            <img src="/assets/img/intro1.jpg" class="img-responsive img-circle">
             <h4 class="text-center">A cidade</h4>
         </div>
 
