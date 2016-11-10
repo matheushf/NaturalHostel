@@ -2,7 +2,6 @@
 
 .menu-tabs {
   margin-top: 10px;
-  color: black;
   text-align: center;
   background: $verdeMenu;
   border: 3px transparentize(lighten($verdeMenu, 35%), 0.6) solid;
@@ -19,6 +18,9 @@
   .menu-item, .menu-link, .menu-link:hover {
     background: none;
     color: white;
+    font-family: "Handschrift", sans-serif;
+    font-size: 17px;
+    font-weight: 800;
     border: 0;
     transition: color, border-top, border, 0.1s ease-in;
   }

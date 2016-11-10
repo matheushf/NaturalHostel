@@ -1,0 +1,18 @@
+.section-gallery {
+
+  .gallery-separator-left {
+    //background: url(/assets/img/boardVector.png);
+    //background-size: cover;
+    //height: 100px;
+    //width: 100%;
+  }
+
+  .collum-gallery {
+
+    img {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
