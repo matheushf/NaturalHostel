@@ -14,13 +14,16 @@ $arrayImagens = array(
 );
 ?>
 
-    <link rel="stylesheet" href="/assets/css/galeria.css">
+<link rel="stylesheet" href="/assets/css/galeria.css">
 
-    <div class="container">
-        <div class="row section-gallery">
+<div class='row section-viewer hide'></div>
 
-            <?php foreach ($arrayImagens as $titulo => $imagens) { ?>
+<div class="container">
+    <div class="row section-gallery">
 
+        <?php foreach ($arrayImagens as $titulo => $imagens) { ?>
+
+            <div class="section-category">
                 <div class="col-lg-12">
                     <h2 class="text-center"><?= $titulo ?></h2>
                     <br>
@@ -35,12 +38,15 @@ $arrayImagens = array(
                 <?php } ?>
 
                 <br>
+            </div>
 
-            <?php } ?>
+        <?php } ?>
 
-        </div>
     </div>
+</div>
 
 
 <?php
 get_footer();
+?>
+<script src="/assets/js/galeria.js"></script>

@@ -1,18 +1,47 @@
 .section-gallery {
 
-  .gallery-separator-left {
-    //background: url(/assets/img/boardVector.png);
-    //background-size: cover;
-    //height: 100px;
-    //width: 100%;
-  }
-
   .collum-gallery {
 
     img {
+      transition: 0.5s;
+    }
+
       &:hover {
+
+      img {
+        transform: scale(0.8);
         cursor: pointer;
+        transition: 0.5s;
       }
+    }
+
+  }
+}
+.section-viewer, .img-full-size {
+  top: 5%;
+  left: 5%;
+  right: 5%;
+}
+
+.section-viewer {
+  z-index: 9999;
+  position: fixed;
+  display: block;
+  background: rgba(1, 1, 1, 0.8);
+  overflow: hidden;
+  width: 90%;
+  height: 90%;
+
+  .img-full-size {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+
+    img {
+      height: 100%;
+      width: auto;
     }
   }
 }
