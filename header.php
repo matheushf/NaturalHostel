@@ -41,8 +41,8 @@
 
                 <div class="col-lg-2 pull-right">
                     <div class="intro-buttons animated fadeInRight">
-                        <a class="btn btn-primary facebook"><i class="fa fa-facebook"></i>Facebook</a>
-                        <a class="btn btn-primary instagram"><i class="fa fa-instagram"></i>Instagram</a>
+                        <a class="btn btn-primary facebook" href="https://www.facebook.com/NaturalHostelLagoa/?fref=ts" target="_blank"><i class="fa fa-facebook"></i>Facebook</a>
+                        <a class="btn btn-primary instagram" href="https://www.instagram.com/naturalhostel/" target="_blank"><i class="fa fa-instagram"></i>Instagram</a>
                     </div>
                 </div>
             </div>

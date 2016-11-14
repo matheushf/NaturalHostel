@@ -36,5 +36,11 @@
       margin-right: 5px;
       font-size: 17px;
     }
+
+    &:hover {
+      a {
+        background-color: darken(white, 5%);
+      }
+    }
   }
 }
