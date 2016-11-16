@@ -11,14 +11,15 @@ var gulp = require('gulp'),
     refresh = require('gulp-refresh'),
     jshint = require('gulp-jshint'),
     compass = require('gulp-compass'),
-    wiredep = require('wiredep').stream;
+    wiredep = require('wiredep').stream,
+    concat = require('gulp-concat');
 
 var srcStyles = [
-    'assets/sass/**/*.scss'
+    '/src/assets/sass/**/*.scss'
 ];
 var srcJs = [
-    '!assets/js/vendor/**/*.js',
-    'assets/js/**/*.js'
+    '!/src/assets/js/vendor/**/*.js',
+    '/src/assets/js/**/*.js'
 ];
 
 var srcPaths = srcStyles.concat(srcJs);
@@ -26,8 +27,8 @@ srcPaths.push('**/*.html');
 srcPaths.push('**/*.php');
 
 var srcWiredep = [
-    'header.php',
-    'footer.php'
+    '/src/header.php',
+    '/src/footer.php'
 ];
 
 gulp.task('styles', function () {
@@ -40,11 +41,11 @@ gulp.task('styles', function () {
         gulp.src(srcStyles),
         compass({
             config_file: './config.rb',
-            css: 'assets/css',
-            sass: 'assets/sass'
+            css: '/src/assets/css',
+            sass: '/src/assets/sass'
         }),
         postcss(processors),
-        gulp.dest('assets/css/')
+        gulp.dest('/src/assets/css/')
     ]);
 });
 
@@ -54,6 +55,30 @@ gulp.task('jshint', function () {
         jshint(),
         jshint.reporter('default'),
         refresh()
+    ]);
+});
+
+gulp.task('compress-js', function () {
+    pump([
+        gulp.src(srcJs),
+        uglify(),
+        gulp.dest('dist')
+    ]);
+});
+
+gulp.task('compress-css', function () {
+    pump([
+        gulp.src('/src/assets/css/*.css'),
+        cleanCSS({compatibility: 'ie8'}),
+        gulp.dest('dist')
+    ]);
+});
+
+gulp.task('concat', function () {
+    pump([
+        gulp.src(srcJs),
+        concat('all.js'),
+        gulp.dest('/dist/assets/js')
     ]);
 });
 
@@ -68,7 +93,7 @@ gulp.task('fonts', function () {
     pump([
         gulp.src([
             'bower_components/font-awesome/fonts/fontawesome-webfont.*']),
-        gulp.dest('assets/fonts/')
+        gulp.dest('/src/assets/fonts/')
     ]);
 });
 
@@ -88,7 +113,7 @@ gulp.task('watch:styles', function () {
 
 gulp.task('compress-js', function () {
     pump([
-        gulp.src('assets/js/*.js'),
+        gulp.src('/src/assets/js/*.js'),
         uglify(),
         gulp.dest('dist')
     ]);
@@ -96,7 +121,7 @@ gulp.task('compress-js', function () {
 
 gulp.task('compress-css', function () {
     pump([
-        gulp.src('assets/css/*.css'),
+        gulp.src('/src/assets/css/*.css'),
         cleanCSS({compatibility: 'ie8'}),
         gulp.dest('dist')
     ]);
