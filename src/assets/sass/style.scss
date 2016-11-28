@@ -1,0 +1,98 @@
+@import "header";
+
+.menu-tabs {
+  margin-top: 10px;
+  text-align: center;
+  background: $verdeMenu;
+  border: 3px transparentize(lighten($verdeMenu, 35%), 0.6) solid;
+
+  .nav-tabs {
+    border-bottom: 0;
+  }
+
+  ul {
+    margin-top: 10px;
+    display: inline-block;
+  }
+
+  .menu-item, .menu-link, .menu-link:hover {
+    background: none;
+    color: white;
+    font-family: "Handschrift", sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    border: 0;
+    transition: color, border-top, border, 0.1s ease-in;
+  }
+
+  .menu-item {
+    margin-right: 7px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .menu-item:hover {
+    border-top: 4px solid rgba(168, 144, 46, 0.88);
+
+    a {
+      color: rgba(222, 222, 222, 1);
+    }
+  }
+
+  .menu-active {
+    border: 0;
+    border-top: 4px solid rgba(168, 144, 46, 0.88);
+    border-bottom: 4px solid rgba(168, 144, 46, 0.88);
+    transition: border-top, border-bottom, 1s;
+  }
+
+}
+
+.wrapper-content {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: $verdeWrapper;
+  line-height: 1.8em;
+  font-size: 15px;
+  text-align: left;
+  color: white;
+
+  p {
+    //max-width: 650px;
+    word-wrap: break-word;
+  }
+
+  .about-section {
+    img {
+      width: 50%;
+      height: auto;
+    }
+  }
+}
+
+.section-rooms {
+  margin-bottom: 10px;
+}
+
+.section-gallery {
+  margin-top: 20px;
+
+  .collum-gallery {
+    margin-bottom: 30px;
+
+    img {
+      min-height: 270px;
+      min-width: 290px;
+
+      max-height: 270px;
+      max-width: 290px;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}
+
+.footer {
+  background-color: $verdeMenu;
+}

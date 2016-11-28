@@ -13,7 +13,10 @@ var gulp = require('gulp'),
     compass = require('gulp-compass'),
     wiredep = require('wiredep').stream,
     concatJS = require('gulp-concat'),
-    concatCSS = require('gulp-concat-css');
+    concatCSS = require('gulp-concat-css'),
+    mainBowerFiles = require('main-bower-files'),
+    rename = require('gulp-rename'),
+    gulpIf = require('gulp-if');
 
 var srcStyles = [
     './src/assets/sass/**/*.scss'
@@ -35,6 +38,14 @@ srcPaths.push('**/*.php');
 var srcWiredep = [
     './src/header.php',
     './src/footer.php'
+];
+
+var srcGeneral = [
+    './src/assets/img/**/*',
+    './src/assets/fonts/**/*',
+    './src/libs/*',
+    './src/pages/*',
+    './src/*.*'
 ];
 
 gulp.task('styles', function () {
@@ -125,26 +136,52 @@ gulp.task('fonts', function () {
     pump([
         gulp.src([
             'bower_components/font-awesome/fonts/fontawesome-webfont.*']),
-        gulp.dest('./assets/fonts/')
+        gulp.dest('./assets/')
     ]);
 });
 
 gulp.task('fonts-dist', function () {
     pump([
         gulp.src([
-            'bower_components/font-awesome/fonts/fontawesome-webfont.*']),
-        gulp.dest('./dist/assets/fonts/')
+            'bower_components/font-awesome/fonts/fontawesome-webfont.*'], {base: './bower_components/'}),
+        gulp.dest('./dist/assets/')
     ]);
 });
 
 gulp.task('bower', function () {
-    pump([
+    /*pump([
         gulp.src(srcWiredep),
         wiredep({
             bowerJson: require('./bower.json')
         }),
         gulp.dest('./')
+    ]);*/
+
+    var condition = function (file) {
+        var ext = file.path.split('.');
+        ext = ext[ext.length - 1];
+
+        if (ext == 'js')
+            return true;
+
+        return false;
+    };
+
+    pump([
+        gulp.src(mainBowerFiles()),
+        gulpIf(condition, concatJS('vendor.js'), concatCSS('vendor.css')),
+        gulpIf(condition, uglify(), cleanCSS()),
+        rename(function (path) {
+
+            if (path.extname == '.js') {
+                path.dirname += '/js'
+            } else {
+                path.dirname += '/css'
+            }
+        }),
+        gulp.dest('src/assets/')
     ]);
+
 });
 
 gulp.task('watch:styles', function () {
@@ -164,6 +201,7 @@ gulp.task('build', function () {
     runSequence('bower', 'fonts-dist', 'compress-css', 'compress-js');
 
     pump([
-        gulp.src()
+        gulp.src(srcGeneral, {base: './src'}),
+        gulp.dest('./dist')
     ]);
 });
